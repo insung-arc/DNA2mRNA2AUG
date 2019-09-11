@@ -3,16 +3,16 @@ import os
 def transcripition(dna):
     result = dna
     for x in range(0, len(dna)):
-        if (dna[x] == 'T'):
+        if (result == 'T'):
             result = result + 'A'
 
-        if (dna[x] == 'A'):
+        if (dna[:x] == 'A'):
             result[x] + 'U'
             
-        if (dna[x] == 'C'):
+        if (dna[:x] == 'C'):
             result[x] + 'G'
 
-        if (dna[x] == 'G'):
+        if (dna[:x] == 'G'):
             result[x] + 'C'
 
             
