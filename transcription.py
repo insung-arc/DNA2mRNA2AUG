@@ -4,19 +4,23 @@ def transcripition(dna):
     result = dna
     for x in range(0, len(dna)):
         if (dna[x] == 'T'):
-            result[x] = 'A'
+            result = result + 'A'
 
         if (dna[x] == 'A'):
-            result[x] = 'U'
+            result[x] + 'U'
             
         if (dna[x] == 'C'):
-            result[x] = 'G'
+            result[x] + 'G'
 
         if (dna[x] == 'G'):
-            result[x] = 'C'
+            result[x] + 'C'
+
             
     for x in range(0, len(dna)):
-        print(result[x])
+        print(dna[x], end=' ')
+
+    for x in range(0, len(dna)):
+        print(result[x], end=' ')
     
 if __name__ == "__main__":
     #TACCGGGACA CCTACGCGGA GGACGGGGAC GACCGCGACG ACCGGGAGAC CCCTGGACTG GGTCGGCGTC
