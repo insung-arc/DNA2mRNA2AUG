@@ -1,5 +1,7 @@
 import os
 
+whatisthis = {'A' : 'U', 'T' : 'A', 'G' : 'C', 'C' : 'G'}
+
 def transcripition(dna):
     result = dna
     for x in range(0, len(dna)):
