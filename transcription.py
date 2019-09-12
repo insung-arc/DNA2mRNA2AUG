@@ -6,16 +6,16 @@ def transcripition(dna):
     result = dna
     for x in range(0, len(dna)):
         if (result == 'T'):
-            result = result + 'A'
+            print(whatisthis[result], end=' ')
 
         if (dna[:x] == 'A'):
-            result[x] + 'U'
+            print(whatisthis[result], end=' ')
             
         if (dna[:x] == 'C'):
-            result[x] + 'G'
+            print(whatisthis[result], end=' ')
 
         if (dna[:x] == 'G'):
-            result[x] + 'C'
+            print(whatisthis[result], end=' ')
 
             
     for x in range(0, len(dna)):
@@ -29,3 +29,9 @@ if __name__ == "__main__":
     dna1, dna2, dna3, dna4, dna5, dna6, dna7 = input("Input DNA > ").split()
     print("[INFO] Start Transcripition...")
     transcripition(dna1)
+    transcripition(dna2)
+    transcripition(dna3)
+    transcripition(dna4)
+    transcripition(dna5)
+    transcripition(dna6)
+    transcripition(dna7)
