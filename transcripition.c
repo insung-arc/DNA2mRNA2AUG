@@ -10,19 +10,20 @@ int transcription(char dna[]){
         switch(dna[i]) {
             case 'T':
                 result[i] = 'A';
+                printf("%c", result[i]);
                 break;
             case 'A':
                 result[i] = 'U';
+                printf("%c", result[i]);
                 break;
             case 'G':
                 result[i] = 'C';
+                printf("%c", result[i]);
                 break;
             case 'C':
                 result[i] = 'G';
+                printf("%c", result[i]);
                 break;
-            default:
-                printf("PROGRAM HAS SOME PROBLEM.\nEXIT_CODE.\n");
-//                exit(1);
         }
     }
     return dnaLengs;
@@ -34,10 +35,14 @@ int main() {
 
     printf("Input DNA\n>>> "); 
     gets(dna);
-    int lensDNA = transcription(dna);
+    transcription(dna);
 
-    for (int i = 0; i <= lensDNA; i++) {
-        printf("%s", result);
+    for (int i = 0; dna[i] != '\0'; i++) {
+        printf("%c", result[i]);
+        if (i % 3 == 0) {
+            printf(" ");
+        }
     }
+
     return 0;
 }
