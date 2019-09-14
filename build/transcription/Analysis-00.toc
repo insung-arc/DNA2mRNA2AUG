@@ -1,4 +1,4 @@
-(['/Users/Bahk_InSung/Github/DNA2mRNA2AUG/transcription.py'],
+(['transcription.py'],
  ['/Users/Bahk_InSung/Github/DNA2mRNA2AUG',
   '/Users/Bahk_InSung/Github/DNA2mRNA2AUG'],
  ['codecs'],
