@@ -1,12 +1,19 @@
+print("[INFO] Find Files...")
 
+#DNA.txt File Open & Read
 file = open('DNA.txt', 'r')
+print("[INFO] Open ", file, " Text...") 
 dna = file.read()
-print("DNA :\n")
+print("[INFO] Read ", file, " File...")
+
+print("[Prnt] Start Show DNA...\n")
+print("DNA :")
 print (dna, "\n")
 
 rna = ""
 protein_string = ""
 
+print("[INFO] Start Change DNA to mRNA(Transcripition)...")
 for i in dna:
     if i == "T":
         rna += "A"
@@ -20,10 +27,11 @@ for i in dna:
     if i == "G":
         rna += "C"
 
-#print("[INFO] Start Transcripition...\n")
-print("RNA :\n")
+print("[Prnt] Start Show mRNA...\n")
+print("mRNA :")
 print(rna, "\n")
 
+print("[.Set] Setup mRNA Codon Dictionary...\n")
 rna_codon = {
     "UUU" : "페닐알라닌", "UUC" : "페닐알라닌", "UUA" : "류신", "UUG" :"류신",
     "CUU" : "류신", "CUU" : "류신", "CUC" : "류신", "CUA" : "류신", "CUG" : "류신",
@@ -46,4 +54,5 @@ rna_codon = {
 for i in range(0, len(rna) - (3+len(rna)%3), 3):
     print(rna[i:i+3], " >> ",rna_codon[rna[i:i+3]],"\t")
 
-    
+print("[INFO] Closing File...")   
+file.close()
