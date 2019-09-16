@@ -56,3 +56,5 @@ for i in range(0, len(rna) - (3+len(rna)%3), 3):
 
 print("[INFO] Closing File...")   
 file.close()
+input("Press Enter to continue...")
+
